@@ -80,6 +80,15 @@ class KataPotterTests extends FunSuite {
     val book5 = new Book5
     assert(c.price(List(book1, book1, book1, book2, book3, book4, book4, book5, book5, book5)) === 66.40)
   }
+
+  test("test case from kata docs") {
+    val book1 = new Book1
+    val book2 = new Book2
+    val book3 = new Book3
+    val book4 = new Book4
+    val book5 = new Book5
+    assert(c.price(List(book1, book1, book2, book2, book3, book3, book4, book5)) === 51.20)
+  }
 }
 
 //it("Edge Case") {

@@ -2,16 +2,6 @@ class KataPotter {
 
   val PERCENTAGEOFF = Map[Int, Double](1 -> 1.0, 2 -> 0.95, 3 -> 0.90, 4 -> 0.80, 5 -> 0.75)
 
-  //  def calculatePrice(list: Seq[Book]): Double = {
-  //
-  //    (list.distinct.size) match {
-  //      case (2) => return 2 * 8.00 * DISCOUNTS(2)
-  //      case (3) => return 3 * 8.00 * DISCOUNTS(3)
-  //      case (4) => return 4 * 8.00 * DISCOUNTS(4)
-  //      case (5) => return 5 * 8.00 * DISCOUNTS(5)
-  //      case (_) => return list.size * 8.00 * DISCOUNTS(1)
-  //    }
-
   def calculatePrice(groups: List[Set[Book]]): Double = {
     groups.foldLeft(0.0) {
       (result, current) => result + current.size * 8 * PERCENTAGEOFF(current.size)
