@@ -29,4 +29,18 @@ class KataPotterGroupBooksTests extends FunSuite {
 
     assert(c.groupBooks(books, List()) === List(Set(book1), Set(book1), Set(book1)))
   }
+
+  test("list of four same books should return list of four sets") {
+    val book1 = new Book1
+    val books = List[Book](book1, book1, book1, book1)
+
+    assert(c.groupBooks(books, List()) === List(Set(book1), Set(book1), Set(book1), Set(book1)))
+  }
+
+  test("list of five same books should return list of five sets") {
+    val book1 = new Book1
+    val books = List[Book](book1, book1, book1, book1, book1)
+
+    assert(c.groupBooks(books, List()) === List(Set(book1), Set(book1), Set(book1), Set(book1), Set(book1)))
+  }
 }
